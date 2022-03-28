@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Atividade 6</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<section class="modalOverlay">
+			<section class="modal">
+				<input
+					type="text"
+					class="inputUsuario"
+					placeholder="Seu Nome"
+				/>
+				<button onclick="setName()">Enviar</button>
+			</section>
+		</section>
+
+		<div class="container">
+			<header>
+				<h1>Chatty</h1>
+				<h2></h2>
+			</header>
+			<section class="content">
+				<aside class="grupos"></aside>
+				<section class="chat"></section>
+			</section>
+			<footer>
+				<aside class="sectionGrupos">
+					<input
+						type="text"
+						placeholder="Adicionar Grupo"
+						class="inputAddGrupos"
+					/>
+					<button onclick="postGrupo()">Criar</button>
+				</aside>
+				<section class="sectionChat">
+					<input
+						type="text"
+						placeholder="Nova Mensagem"
+						class="inputAddChat"
+					/>
+					<button onclick="postMensagem()">Enviar</button>
+				</section>
+			</footer>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

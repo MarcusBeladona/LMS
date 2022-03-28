@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.logo {
+	color: white;
+}
+
+.navegador {
+	background-color: purple;
+	padding: 16px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.navegador nav {
+	display: flex;
+}
+
+.navegador nav a {
+	padding: 8px 12px;
+	text-decoration: none;
+	color: white;
+}
+
+.navegador nav a:hover {
+	color: purple;
+	background-color: white;
+}
+
+.home {
+	height: 100vh;
+	display: flex;
+}
+
+.esquerdo {
+	width: 300px;
+	background-color: rgb(92, 0, 92);
+	display: flex;
+	flex-direction: column;
+}
+
+.esquerdo a {
+	text-decoration: none;
+	color: white;
+	padding: 16px;
+}
+
+.esquerdo a:hover {
+	background-color: rgb(68, 0, 68);
+}
+
+.principal {
+	flex-grow: 1;
+	display: flex;
+}
+
+.conteudo {
+	padding: 16px;
+	width: min-content;
+	flex-grow: 3;
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: space-around;
+	align-content: flex-start;
+}
+
+.conteudo img {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	margin: 8px;
+}
+
+.direito {
+	background-color: rgb(216, 216, 216);
+	width: min-content;
+	padding: 16px;
+	flex-grow: 1;
+}
+
+footer {
+	padding: 16px;
+	background-color: rgb(68, 0, 68);
+	text-align: center;
+	color: white;
+}

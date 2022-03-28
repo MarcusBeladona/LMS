@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://unpkg.com/phosphor-icons"></script>
+		<title>Atividade 5</title>
+	</head>
+	<body>
+		<nav>
+			<span class="logo"><strong>VictorBook</strong></span>
+			<section class="button-area">
+				<button class="postar" onclick="modalToggle()">Postar</button>
+				<button class="icon ph-list"></button>
+			</section>
+		</nav>
+
+		<section class="content">
+			<aside class="lateral closed">
+				<a href="" class="post">Link 1</a>
+				<a href="" class="post">Link 2</a>
+				<a href="" class="post">Link 3</a>
+			</aside>
+			<section class="feed">
+				<article class="post">
+					<strong>Irmão do Jorel</strong>
+					<p>Oi. Tudo bem?</p>
+				</article>
+				<article class="post">
+					<strong>Jorel</strong>
+					<p>Sim, tudo bem!</p>
+				</article>
+			</section>
+		</section>
+
+		<section class="modalOverlay hidden">
+			<section class="modal">
+				<input type="text" id="nome" placeholder="Nome" />
+				<input type="text" id="texto" placeholder="Texto" />
+				<input
+					type="submit"
+					id="enviar"
+					value="Enviar"
+					onclick="gerarMensagem()"
+				/>
+				<input
+					type="submit"
+					id="fechar"
+					value="Cancelar"
+					onclick="modalToggle()"
+				/>
+			</section>
+		</section>
+
+		<script>
+			let hamburguer = document.querySelector(".icon");
+			let lateral = document.querySelector(".lateral");
+
+			hamburguer.addEventListener("click", function () {
+				lateral.classList.toggle("closed");
+			});
+
+			function modalToggle() {
+				document
+					.querySelector(".modalOverlay")
+					.classList.toggle("hidden");
+			}
+
+			function gerarMensagem() {
+				let nome = document.getElementById("nome").value;
+				let texto = document.getElementById("texto").value;
+
+				let strong = document.createElement("strong");
+				strong.appendChild(document.createTextNode(nome));
+
+				let p = document.createElement("p");
+				p.appendChild(document.createTextNode(texto));
+
+				let article = document.createElement("article");
+				article.classList.add("post");
+				article.appendChild(strong);
+				article.appendChild(p);
+
+				let feed = document.querySelector(".feed");
+				feed.appendChild(article);
+
+				modalToggle();
+			}
+		</script>
+	</body>
+</html>

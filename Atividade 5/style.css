@@ -1,0 +1,107 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+
+.logo,
+.icon {
+	font-size: 1.5em;
+}
+
+button {
+	align-items: center;
+	justify-content: center;
+	border: none;
+	background: none;
+	font-size: 16px;
+	line-height: 16px;
+	height: 40px;
+	padding: 0px 16px;
+}
+
+button:hover {
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.12);
+}
+
+button.icon {
+	width: 40px;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	background-color: blueviolet;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 16px;
+}
+
+nav button {
+	color: white;
+}
+
+.button-area {
+	display: flex;
+}
+
+.content {
+	padding-top: 40px;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+}
+
+.lateral {
+	background: rgb(224, 224, 224);
+	width: 400px;
+	height: 100%;
+	transition: 400ms;
+	padding: 16px;
+}
+
+.closed {
+	width: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+.feed {
+	width: 100%;
+	height: 100%;
+	padding: 40px;
+}
+
+.post {
+	display: block;
+	width: 100%;
+	margin-bottom: 16px;
+	padding: 16px;
+	border-radius: 8px;
+	background: rgba(12, 12, 12, 0.08);
+}
+
+.modalOverlay {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal {
+	padding: 16px;
+	border-radius: 8px;
+	background: white;
+}
+
+.hidden {
+	display: none;
+}
